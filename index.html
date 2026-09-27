@@ -48,10 +48,21 @@ footer{text-align:center;color:var(--muted);font:13px Arial,sans-serif;margin-to
   text-decoration:none;
   color:white;
   background:var(--ink);
-  padding:12px 19px;
+  padding:15px 32px;
   border-radius:999px;
-  font:700 14px Arial,sans-serif;
+  font:700 15px Arial,sans-serif;
+  letter-spacing:.02em;
+  box-shadow:0 6px 16px rgba(47,42,38,.22);
+  transition:transform .15s ease,box-shadow .15s ease,background .15s ease;
 }
+.feature a:hover{background:#241f1b;transform:translateY(-1px);box-shadow:0 9px 20px rgba(47,42,38,.26)}
+.feature a:active{transform:scale(.97);box-shadow:0 3px 10px rgba(47,42,38,.2)}
+.btn-row{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;align-items:center}
+.feature a.btn-secondary{background:transparent;color:var(--ink);border:2px solid var(--ink);box-shadow:none;padding:13px 30px}
+.feature a.btn-secondary:hover{background:var(--ink);color:#fff;transform:translateY(-1px)}
+.feature .feature-sub{margin:20px auto 0}
+.feature a.text-link{background:none;color:var(--muted);padding:4px 2px;border-radius:0;box-shadow:none;font:700 14px Arial,sans-serif;border-bottom:1px solid var(--line);letter-spacing:0}
+.feature a.text-link:hover{background:none;color:var(--ink);transform:none;box-shadow:none}
 .social{
   margin-top:32px;
   text-align:center;
@@ -76,6 +87,8 @@ footer{text-align:center;color:var(--muted);font:13px Arial,sans-serif;margin-to
   .section-title{font-size:28px;margin:38px 0 18px}
   .feature{padding:28px 18px}
   .feature h2{font-size:25px}
+  .btn-row{flex-direction:column;align-items:stretch}
+  .btn-row a{text-align:center}
 }
 @media(max-width:620px){.card{grid-template-columns:110px 1fr;gap:14px;padding:13px}.card h2{font-size:20px}.card p{font-size:14px}}
 </style></head><body><main>
@@ -107,7 +120,12 @@ footer{text-align:center;color:var(--muted);font:13px Arial,sans-serif;margin-to
 <section class="feature">
 <h2>Entre Saber e Ser</h2>
 <p>Conversas e investigações sobre desenvolvimento humano, consciência e a forma como compreendemos a nós mesmos e o mundo.</p>
-<a href="https://entresabereser.com.br" target="_blank" rel="noopener">CONHECER O ENTRE SABER E SER</a>
+<div class="btn-row">
+<a href="https://open.spotify.com/show/0343iheVfr87E5h7yomJvY" target="_blank" rel="noopener">Ouvir no Spotify</a>
+<!-- Canal no YouTube: https://www.youtube.com/@entresabereser -->
+<a class="btn-secondary" href="https://www.youtube.com/@entresabereser" target="_blank" rel="noopener">Assistir no YouTube</a>
+</div>
+<p class="feature-sub"><a class="text-link" href="https://entresabereser.com.br" target="_blank" rel="noopener">Conhecer o site Entre Saber e Ser</a></p>
 </section>
 
 <section class="social">
